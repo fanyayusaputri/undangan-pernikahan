@@ -1,0 +1,796 @@
+:root {
+  --bg-main: #F6F2EC;
+  --bg-section: #EDE4D8;
+  --accent: #D4C2A3;
+  --accent-strong: #C2A176;
+  --text-main: #7A6145;
+}
+
+
+/* GLOBAL */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Poppins','Georgia', serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  text-align: center;
+  background-color: #F5F1EC;
+  color: var(--text-main);
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("bg74.png") no-repeat center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 { font-size: 32px; }
+.hero h4 { font-size: 14px; }
+.hero p {
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.kepada {
+  margin-top: 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #555;
+}
+
+#namaTamu {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.buka-btn {
+  margin-top: 20px;
+  font-size: 12px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: #5e430d;
+  color: #fff;
+   transition: all 0.3s ease;
+}
+
+.buka-btn:hover {
+  transform: scale(1.05);
+  background: #7a5a1a;
+}
+
+.buka-btn:active {
+  transform: scale(0.95);
+}
+
+/* SECTION */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 1s;
+}
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* OPENING */
+.opening-text {
+  max-width: 700px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.bismillah-img {
+  width: 200px;
+  max-width: 80%;
+}
+
+.undangan {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* MEMPELAI */
+.mempelai {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin: 30px auto;
+}
+
+.mempelai img {
+  width: 75%;
+  max-width: 280px;
+  border-radius: 20px;
+
+  /* TRANSISI GLOBAL */
+  transition: all 0.5s ease;
+}
+
+/* efek saat hover (desktop) */
+.mempelai img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* efek saat ditekan (HP) */
+.mempelai img:active {
+  transform: scale(0.97);
+}
+
+
+.mempelai .text {
+  width: 100%;
+}
+
+.mempelai h3 { font-size: 18px; }
+.mempelai p { font-size: 13px; }
+
+/* ACARA */
+/* ================= JUDUL SECTION ================= */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--accent-strong);
+  position: relative;
+}
+
+/* garis kecil aesthetic */
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.acara-container {
+  display: flex;
+  flex-direction: column; /* MOBILE: atas bawah */
+  gap: 20px;
+
+  /* BACKGROUND GRADIENT */
+  background: linear-gradient(
+    135deg,
+    var(--bg-section),
+    var(--bg-main),
+    var(--accent)
+  );
+
+  padding: 20px;
+  border-radius: 20px;
+}
+/* ================= AYAT ================= */
+
+
+.acara-text,
+.acara-img {
+  width: 100%;
+  text-align: center;
+}
+.acara-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.ayat {
+  font-size: 13px;
+  color: #6b5c55;
+  font-style: italic;
+  line-height: 1.8;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.ayat span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ================= EVENT (AKAD & RESEPSI) ================= */
+.event {
+  padding: 15px;
+  border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.5);
+  border-radius: 12px;
+  margin-bottom: 25px; /* JARAK ANTAR EVENT */
+  transition: 0.3s;
+}
+
+.event:hover {
+  transform: translateY(-3px);
+}
+
+/* COUNTDOWN */
+.countdown-section {
+  padding: 40px 15px;
+}
+
+.wedding-date span {
+  font-size: 35px;
+}
+
+.time {
+  width: 65px;
+  padding: 12px;
+}
+
+.time h3 { font-size: 20px; }
+.time p { font-size: 11px; }
+
+/* GALERI */
+.gallery {
+  padding: 40px 15px;
+}
+
+.gallery-slider {
+  overflow-x: auto;
+  display: flex;
+  cursor: grab;
+}
+
+.gallery-track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+}
+
+.gallery-track img {
+  width: 150;
+  height: 230px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+/* ================= AMPLOP DIGITAL ================= */
+
+.amplop {
+  padding: 40px 15px;
+}
+
+/* container bank */
+.amplop-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* card rekening */
+.card {
+  background: linear-gradient(145deg, #ffffff, #f3ede6);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card, .event {
+  transition: all 0.3s ease;
+}
+
+.card:hover, .event:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 5px;
+  color: var(--accent-strong);
+}
+
+.rekening {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* QR */
+.qr-section {
+  margin-top: 30px;
+}
+
+.qr-img {
+  width: 150px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.copy-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background: var(--accent-strong);
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copy-btn:hover {
+  background: #a8895f;
+}
+/* TOAST NOTIFICATION */
+#toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--accent-strong);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* aktif */
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+/* ================= RSVP SURAT ================= */
+
+.rsvp-surat {
+  padding: 40px 15px;
+}
+
+.surat-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  /* efek kertas */
+  border: 1px solid #e0d6c8;
+  position: relative;
+}
+
+/* garis kop surat */
+.surat-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: var(--accent-strong);
+  border-radius: 10px 10px 0 0;
+}
+
+.pembuka {
+  font-size: 14px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.popup-wa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 250px;
+}
+
+.btn-popup {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #C2A176;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-close {
+  margin-top: 10px;
+  background: #ccc;
+  border: none;
+  padding: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* BUTTON */
+.kirim-btn {
+  margin-top: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  background: var(--accent-strong);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kirim-btn:hover {
+  background: #a8895f;
+}
+textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+  font-family: 'Poppins', serif;
+}
+/* FOOTER */
+.footer {
+  background: linear-gradient(135deg, #f6f2ec, #EDE4D8);
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.footer-content {
+  max-width: 400px;
+  margin: auto;
+}
+
+.footer h3 {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  color: var(--accent-strong);
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #7A6145;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-nama {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #C2A176;
+  letter-spacing: 2px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+
+  .hero h1 { font-size: 40px; }
+
+   /* MEMPELAI ZIG-ZAG */
+  .mempelai {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .mempelai img {
+    width: 45%;
+  }
+  
+  .mempelai .text {
+    width: 55%;
+  }
+
+  /* PRIA → gambar kanan */
+  .mempelai.pria {
+    flex-direction: row-reverse;
+     animation: slideRight 1s ease;
+  }
+
+  .mempelai.pria .text {
+    text-align: right;
+  }
+
+  @keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+  /* WANITA → gambar kiri */
+  .mempelai.wanita {
+    flex-direction: row;
+    animation: slideLeft 1s ease;
+  }
+
+  .mempelai.wanita .text {
+    text-align: left;
+  }
+
+  .acara-container {
+    flex-direction: row; /* mulai sejajar */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .acara-text,
+  .acara-img {
+    width: 50%;
+  }
+
+  .acara-text {
+    text-align: left;
+  }
+
+ .ayat {
+    text-align: center;
+  }
+
+
+  .gallery-track img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .amplop-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card {
+    width: 250px;
+  }
+
+  .qr-img {
+    width: 180px;
+  }
+  .time {
+    width: 80px;
+  }
+}
+
+/* Countdown */
+.countdown-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time {
+  background: linear-gradient(145deg, #ffffff, #f3ede6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 90px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.time:hover {
+  transform: translateY(-5px);
+}
+
+.time h3 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--accent-strong);
+}
+
+.time p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .time {
+    width: 70px;
+    padding: 15px;
+  }
+
+  .wedding-date span {
+    font-size: 40px;
+  }
+}
+/* ================= DESKTOP ================= */
+@media (min-width: 1024px) {
+
+  /* HERO */
+  .hero {
+    padding: 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h4 {
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+  .section-title {
+    font-size: 36px;
+  }
+
+  .acara-img img {
+    max-width: 450px;
+  }
+
+  .ayat {
+    font-size: 14px;
+  }
+
+  .acara-text {
+    text-align: left;
+  }
+
+  /* MEMPELAI */
+  .mempelai {
+    max-width: 1000px;
+    margin: 50px auto;
+    gap: 50px;
+  }
+
+  .mempelai img {
+    max-width: 320px;
+  }
+
+  .mempelai.pria {
+    flex-direction: row-reverse; /* zig-zag */
+  }
+
+  .mempelai.pria .text {
+    text-align: right;
+  }
+
+  .mempelai.wanita .text {
+    text-align: left;
+  }
+  
+
+  /* ACARA */
+  .acara {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 60px;
+  }
+
+ .acara-container {
+  display: flex;
+  flex-direction: row; /* SELALU SEJAJAR */
+  align-items: center;
+  gap: 20px;
+}
+
+  .acara-img img {
+    width: 50%;
+    max-width: 450px;
+  }
+
+  .acara-text {
+    text-align: left;
+  }
+
+  .acara-text h2 {
+    font-size: 36px;
+  }
+
+  /* COUNTDOWN */
+  .countdown-section {
+    max-width: 900px;
+    margin: 60px auto;
+  }
+
+  .time {
+    width: 100px;
+    padding: 20px;
+  }
+
+  .time h3 {
+    font-size: 30px;
+  }
+
+  /* GALERI */
+  .gallery {
+    max-width: 1100px;
+    margin: 60px auto;
+  }
+
+  .gallery-track img {
+    width: 260px;
+    height: 340px;
+  }
+
+  /* LOKASI */
+  iframe {
+    max-width: 1000px;
+    border-radius: 20px;
+  }
+  
+
+  @media (max-width: 480px) {
+  .mempelai {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mempelai img {
+    width: 70%;
+  }
+
+  .mempelai .text {
+    width: 100%;
+  }
+}
+
+}
