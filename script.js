@@ -75,7 +75,7 @@
   function kirimWA(tujuan) {
     const nomor = tujuan === "noval"
       ? "6281281419884"
-      : "6285814497434";
+      : "6281348313011";
 
     const text = `Konfirmasi Kehadiran - Noval & Nabila 💍
 
